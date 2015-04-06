@@ -148,6 +148,10 @@ a {
     cursor: pointer;
 }
 
+#page {
+    display: none;
+}
+
 /* main container styles */
 
 #wrapper {

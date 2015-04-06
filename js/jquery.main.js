@@ -4,9 +4,16 @@ jQuery(function(){
 });
 
 jQuery(window).load(function(){
+    removeLoad();
 	initBackgroundResize();
 	jQuery('input, textarea').placeholder();
 });
+
+// switch from loading to actual site
+function removeLoad(){
+    jQuery("#loading").hide();
+    jQuery("#page").show();
+}
 
 // initialize custom form elements
 function initCustomForms() {
