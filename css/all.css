@@ -131,6 +131,7 @@ body {
 	font-size: 1.5em;
 	line-height: 1.467em;
 	min-width: 320px;
+    background-color: black;
 }
 
 @-moz-document url-prefix() {
@@ -147,6 +148,15 @@ fieldset {
 a {
     cursor: pointer;
 }
+
+#loading {
+    z-index: 9999;
+    width: 100%;
+    background-color: black;
+    padding-top: 400px;
+    text-align: center;
+}
+
 
 #page {
     display: none;

@@ -4,15 +4,16 @@ jQuery(function(){
 });
 
 jQuery(window).load(function(){
-    removeLoad();
-	initBackgroundResize();
+    setTimeout(function(){ removeLoad() }, 500);
 	jQuery('input, textarea').placeholder();
 });
 
 // switch from loading to actual site
 function removeLoad(){
-    jQuery("#loading").hide();
-    jQuery("#page").show();
+    jQuery("#loading").fadeOut(1000, function(){
+        jQuery("#page").fadeIn(2000);
+        initBackgroundResize();
+    });
 }
 
 // initialize custom form elements
