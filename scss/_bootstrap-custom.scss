@@ -1,0 +1,65 @@
+// custom variables and override bootstrap variables
+
+//Scaffolding
+$body-bg: #fff;
+$text-color: #fff;
+$link-color: #ff7a00;
+$link-hover-decoration: none;
+
+//Typography
+$font-family-base: 'robotomedium', Arial, Helvetica, sans-serif;
+$font-size-base: 15px;
+$line-height-base: 1.467;
+$headings-font-weight: 700;
+$headings-color: #fff;
+
+//Components
+$border-radius-base: 3px;
+$border-radius-small: 3px;
+
+//Buttons
+$btn-font-weight: 700;
+$btn-default-color: #fff;
+$btn-default-bg: #db631e;
+$btn-primary-color: #ff7829;
+$btn-primary-border: #ff7829;
+
+// Forms
+$input-border-radius: 0;
+$input-border: transparent;
+$input-border-focus: transparent;
+$input-color: #000;
+$input-color-placeholder: #d0d0d0;
+
+//Grid system
+$grid-gutter-width: 26px;
+$grid-columns: 12;
+// $grid-float-breakpoint: 768px;
+
+//Container sizes
+$container-large-desktop: 1243px;
+
+// Media queries breakpoints
+$screen-lg: 1256px;
+
+//Navbar
+$navbar-height: inherit;
+$navbar-border-radius: 0;
+$navbar-default-link-color: #fff;
+$navbar-default-link-hover-color: #1a7bd1;
+$navbar-default-link-active-color: #1a7bd1;
+$navbar-default-bg: transparent;
+
+//Pagination
+$pagination-bg: transparent;
+$pagination-border: 0;
+$pagination-color: #fff;
+
+//Custom Breakpoints
+$vmobile: 479px;
+
+$condensed-base: 'roboto_condensedregular',  Arial, Helvetica, sans-serif;
+$condensed-bold: 'roboto_condensedbold',  Arial, Helvetica, sans-serif;
+$roboto-bold: 'robotobold', Arial, Helvetica, sans-serif;
+$roboto-black: 'robotoblack', Arial, Helvetica, sans-serif;
+$roboto-regular: 'robotoregular', Arial, Helvetica, sans-serif;
