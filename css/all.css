@@ -149,6 +149,8 @@ a {
     cursor: pointer;
 }
 
+/* loading container styles */
+
 #loading {
     z-index: 9999;
     width: 100%;
@@ -157,6 +159,13 @@ a {
     text-align: center;
 }
 
+#loading #load-logo-image {
+    width: 45vw;
+}
+
+#loading #load-loader-image {
+    width: 8vw;
+}
 
 #page {
     display: none;
@@ -421,6 +430,36 @@ h1 span {
 
 .careers-block {
     padding: 66px 0 75px;
+}
+
+.careers-block h2{
+    margin-bottom: 30px;
+}
+
+.careers-block .hold {
+    background: #fff;
+    background: rgba(255, 255, 255, .8);
+    color: #464646;
+    padding: 32px 5.3% 22px;
+    letter-spacing: 1px;
+}
+
+.careers-block .hold ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.careers-block .hold ul li:first-child {
+    text-decoration: underline;
+}
+
+.careers-block h3 {
+    font: 2em/1.067em "roboto_condensedbold", Arial, Helvetica, sans-serif;
+    margin: 0 0 17px;
+    color: #464646;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0;
 }
 
 .work-environment {
@@ -2089,6 +2128,10 @@ body > .jcf-select-drop.jcf-drop-flipped {
 		margin: 0 0 13px;
 		text-align: center;
 	}
+
+    .hero-block .sub-text {
+        text-align: center;
+    }
 
 	.hero-block h1 {
 		font-size: 30px;
