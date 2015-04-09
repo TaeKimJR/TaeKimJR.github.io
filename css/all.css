@@ -478,13 +478,14 @@ h1 span {
 .contact-block {
 	background: #000;
 	background: rgba(0, 0, 0, .8);
-	padding: 50px 0 63px;
+	/*padding: 50px 0 63px;*/
+    padding: 15px;
 }
 
 .contact-block .social-networks {
 	letter-spacing: -4px;
 	font-size: 0;
-	margin: 0 0 31px;
+	/*margin: 0 0 31px;*/
 }
 
 .contact-block .social-networks li {
@@ -492,7 +493,7 @@ h1 span {
 	vertical-align: top;
 	letter-spacing: 0;
 	font: 25px/27px "roboto_condensedbold", Arial, Helvetica, sans-serif;
-	margin: 0 0 20px 10.2%;
+	margin: 20px 0 20px 10.2%;
 }
 
 .contact-block .social-networks li:first-child {
@@ -2060,6 +2061,10 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 @media only screen and (max-width: 767px) {
+    #header .navbar {
+        margin-bottom: 20px;
+    }
+
 	#header .btn-join {
 		max-width: 150px;
 		text-align: center;
