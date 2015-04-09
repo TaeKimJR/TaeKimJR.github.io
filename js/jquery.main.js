@@ -12,7 +12,7 @@ jQuery(window).load(function(){
 function removeLoad(){
     jQuery("#loading").fadeOut(1000, function(){
         jQuery("#page").fadeIn(2000);
-        initBackgroundResize();
+        jQuery("#background").fullBg();
     });
 }
 

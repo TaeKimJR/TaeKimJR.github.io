@@ -162,6 +162,13 @@ a {
     display: none;
 }
 
+.fullBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
 /* main container styles */
 
 #wrapper {
