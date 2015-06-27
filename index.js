@@ -1,0 +1,35 @@
+var express = require('express'),
+    exphbs  = require('express3-handlebars'),
+    config = require('./config.js'),
+    processingResult = require('./common/processing_result.js');
+
+var app = express();
+
+//===============EXPRESS=================
+// Configure Express
+app.use(express.static(__dirname + '/public'));
+
+app.use(express.cookieParser());
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(express.session({ secret: config.secret }));
+
+app.use(app.router);
+
+// Configure express to use handlebars templates
+var hbs = exphbs.create({
+    defaultLayout: 'main'
+});
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+
+//===============ROUTES=================
+// VIEWS
+app.get('/', function(req, res){
+  res.render('home');
+});
+
+//===============PORT=================
+var port = process.env.PORT || 5000;
+app.listen(port);
