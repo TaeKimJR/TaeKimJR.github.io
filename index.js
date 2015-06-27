@@ -1,7 +1,6 @@
 var express = require('express'),
     exphbs  = require('express3-handlebars'),
-    config = require('./config.js'),
-    processingResult = require('./common/processing_result.js');
+    config = require('./config.js');
 
 var app = express();
 
@@ -17,17 +16,15 @@ app.use(express.session({ secret: config.secret }));
 app.use(app.router);
 
 // Configure express to use handlebars templates
-var hbs = exphbs.create({
-    defaultLayout: 'main'
-});
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+// var hbs = exphbs.create();
+// app.engine('handlebars', hbs.engine);
+// app.set('view engine', 'handlebars');
 
 
 //===============ROUTES=================
 // VIEWS
 app.get('/', function(req, res){
-  res.render('home');
+  res.sendFile(path.join(__dirname+'/public/index.html'));
 });
 
 //===============PORT=================
