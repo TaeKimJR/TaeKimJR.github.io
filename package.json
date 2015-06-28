@@ -1,7 +1,6 @@
 {
   "name": "TKJR",
   "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
     "ampersand-app": "^1.0.4",
     "ampersand-model": "^5.0.3",
@@ -43,8 +42,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "deploy": "surge -p public -d baymaxsaysso.surge.sh",
-    "start": "webpack-dev-server",
-    "yolo": "npm run build && npm run deploy"
+    "setup-dev": "npm run install && npm run build",
+    "start-dev": "node ''"
   }
 }
