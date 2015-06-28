@@ -42,8 +42,9 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "deploy": "ENTER DEPLOY COMMAND HERE",		
+    "deploy": "ENTER DEPLOY COMMAND HERE",
     "start-dev": "node 'index.js'",
+    "start-dev-front-only": "webpack-dev-server",
     "yolo": "npm run build && npm run deploy"
   }
 }
