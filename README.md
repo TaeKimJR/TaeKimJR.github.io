@@ -12,6 +12,5 @@ npm run build
 
 ## Running Locally
 ```
-node 'index.js'
-navigate to http://localhost:5000/
+npm run start-dev
 ```

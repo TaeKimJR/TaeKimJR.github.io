@@ -42,7 +42,8 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "setup-dev": "npm run install && npm run build",
-    "start-dev": "node ''"
+    "deploy": "ENTER DEPLOY COMMAND HERE",		
+    "start-dev": "node 'index.js'",
+    "yolo": "npm run build && npm run deploy"
   }
 }

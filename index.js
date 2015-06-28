@@ -22,4 +22,5 @@ app.get('/', function(req, res){
 
 //===============PORT=================
 var port = process.env.PORT || 5000;
+console.log("||||||||| PORT: " + port + " |||||||||");
 app.listen(port);
