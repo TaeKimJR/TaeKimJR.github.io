@@ -1,0 +1,51 @@
+.half-carousel-container {
+	overflow: hidden;
+
+	width: 100%;	
+
+	.carousel-static-image {
+		float: left;
+
+		width: 50%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}			
+	}
+		
+	.carousel-rotating-images {
+		position: relative;
+		overflow: hidden;
+
+		width: 50%;
+		height: 100%;
+
+		.images-container {
+			position: absolute;
+			
+			height: 100%;
+
+			transition: left 1s;
+
+			img {
+				vertical-align: text-top;
+
+				height: 100%;
+			}
+				
+		}			
+
+		.image-description {
+			position: absolute;
+			left: 25px;
+			top: 25px;
+			z-index: 1000;
+
+			transition: opacity 1s;
+		}			
+	}		
+}
+	
+
