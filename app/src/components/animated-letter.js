@@ -20,8 +20,12 @@ export default React.createClass({
 
 		setTimeout(
 			function(){
-				timeoutThis.setState({opacity: 100})
+				timeoutThis._setOpacity(100)
 			}, randomTime);
+  },
+
+  _setOpacity (opacity) {
+  	this.setState({opacity: opacity})
   },
 
 	render () {
