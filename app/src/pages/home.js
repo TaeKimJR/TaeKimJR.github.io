@@ -8,18 +8,21 @@ export default React.createClass({
 
 	render() {
 		var imageSrcList = ['http://placehold.it/350x150', 'http://placehold.it/250x150', 'http://placehold.it/150x150']
+		var textList = ['text1', 'text2', 'text3']
 
 		return (
 			<div className='home'>
-				<div className='image-container'>
-					<RotatingImages imageSrcList={imageSrcList} timer={3000}/>
-				</div>
-				<div className='name-container'>
-					<AnimatedText text='Tae Kim' />
-				</div>
-				<div className='description-container'>
-					<RotatingText />
-				</div>
+				<div className='container'>
+					<div className='image-container'>
+						<RotatingImages imageSrcList={imageSrcList} timer={5000} />
+					</div>
+					<div className='name-container'>
+						<AnimatedText text='Tae Kim' />
+					</div>
+					<div className='description-container'>
+						<RotatingText textList={textList} timer={5000} />
+					</div>
+				</div>				
 			</div>
 		)
 	}

@@ -4,11 +4,14 @@ export default React.createClass({
 	displayName: 'RotatingImages',
 
 	ANIMATION_DURATION: 1000,
+	LEFT: 0,
+	RIGHT: 1,
 
 	getInitialState () {
 		return {
 			index: 0,
-			opacity: 100
+			left: 0,
+			rightOrLeft: this.LEFT	// 0 = left, 1 = right
 		}
 	},
 
@@ -29,18 +32,33 @@ export default React.createClass({
   },
 
   _nextImage () {
-  	var imageListLength = this.props.imageSrcList.length
-		var nextIndex = ( this.state.index + 1 ) % imageListLength
+		var timeoutThis = this  	
 
-		this.setState({index: nextIndex})
+		setTimeout(
+  		function(){
+  			var imageListLength = timeoutThis.props.imageSrcList.length
+				var nextIndex = ( timeoutThis.state.index + 1 ) % imageListLength
+
+				timeoutThis.setState({index: nextIndex})
+  		}, timeoutThis.ANIMATION_DURATION)  	
   },
 
   _fadeOutImage () {
-		this.setState({opacity: 0})
+  	if(this.state.rightOrLeft === this.LEFT){
+  		this.setState({left: -5000, rightOrLeft: this.RIGHT})
+  	}
+  	else{
+  		this.setState({left: 5000, rightOrLeft: this.LEFT})
+  	}
   },
 
   _fadeInImage () {
-  	this.setState({opacity: 100})
+  	var timeoutThis = this
+
+  	setTimeout(
+			function(){
+				timeoutThis.setState({left: 0})
+			}, timeoutThis.ANIMATION_DURATION)  	
   },
 
 	render () {
@@ -49,7 +67,7 @@ export default React.createClass({
 		var imageSrc = imageList[currentIndex]
 
 		var imageStyle = {
-			opacity: this.state.opacity
+			left: this.state.left
 		}
 
 		return (
