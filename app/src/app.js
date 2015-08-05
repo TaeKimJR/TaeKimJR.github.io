@@ -1,9 +1,9 @@
 import app from 'ampersand-app'
 import Router from './router'
 import MainStyle from './styles/main.less'
-import HeaderStyle from './styles/header.less'
-import HalfCarouselStyle from './styles/half-carousel.less'
-import AboutStyle from './styles/about.less'
+import RotatingImageStyle from './styles/rotating-images.less'
+import AnimatedTextStyle from './styles/animated-text.less'
+import RotatingText from './styles/rotating-text.less'
 
 window.app = app
 

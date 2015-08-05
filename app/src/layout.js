@@ -7,10 +7,7 @@ export default React.createClass({
 	render () {
 		return (
 			<div>
-			  <Header />
-			  <div className='container'>
-			  	{this.props.children}
-			  </div>
+		  	{this.props.children}
 		  </div>
 		)
 	}
