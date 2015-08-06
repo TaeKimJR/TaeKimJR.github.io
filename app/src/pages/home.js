@@ -2,6 +2,7 @@ import React from 'react'
 import RotatingImages from './../components/rotating-images'
 import AnimatedText from './../components/animated-text'
 import RotatingText from './../components/rotating-text'
+import NavSlider from './../components/nav-slider'
 
 export default React.createClass({
 	displayName: 'TKJR',
@@ -22,7 +23,13 @@ export default React.createClass({
 					<div className='description-container'>
 						<RotatingText textList={textList} timer={5000} />
 					</div>
-				</div>				
+				</div>
+
+				<div className='nav-container'>
+					<NavSlider>
+						HELLO WORLD
+					</NavSlider>
+				</div>
 			</div>
 		)
 	}

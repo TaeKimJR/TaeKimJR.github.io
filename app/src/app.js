@@ -3,7 +3,8 @@ import Router from './router'
 import MainStyle from './styles/main.less'
 import RotatingImageStyle from './styles/rotating-images.less'
 import AnimatedTextStyle from './styles/animated-text.less'
-import RotatingText from './styles/rotating-text.less'
+import RotatingTextStyle from './styles/rotating-text.less'
+import NavStyle from './styles/nav-slider.less'
 
 window.app = app
 
