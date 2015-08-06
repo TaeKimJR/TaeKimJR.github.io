@@ -4,7 +4,6 @@ import AnimatedText from './../components/animated-text'
 import RotatingText from './../components/rotating-text'
 import NavSlider from './../components/nav-slider'
 import ContactForm from './../components/contact-form'
-import Navigation from './../components/navigation'
 
 export default React.createClass({
 	displayName: 'TKJR',
@@ -20,7 +19,7 @@ export default React.createClass({
 						<RotatingImages imageSrcList={imageSrcList} timer={5000} />
 					</div>
 					<div className='name-container'>
-						<AnimatedText text='Tae Kim' />
+						<AnimatedText text='TAE KIM' />
 					</div>
 					<div className='description-container'>
 						<RotatingText textList={textList} timer={5000} />

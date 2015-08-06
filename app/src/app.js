@@ -6,8 +6,6 @@ import AnimatedTextStyle from './styles/animated-text.less'
 import RotatingTextStyle from './styles/rotating-text.less'
 import NavStyle from './styles/nav-slider.less'
 import ContactFormStyle from './styles/contact-form.less'
-import NavigationStyle from './styles/navigation.less'
-import ResponsiveSquareImgStyle from './styles/responsive-square-image.less'
 
 window.app = app
 
