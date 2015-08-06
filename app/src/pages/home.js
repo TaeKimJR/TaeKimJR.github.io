@@ -4,6 +4,7 @@ import AnimatedText from './../components/animated-text'
 import RotatingText from './../components/rotating-text'
 import NavSlider from './../components/nav-slider'
 import ContactForm from './../components/contact-form'
+import Navigation from './../components/navigation'
 
 export default React.createClass({
 	displayName: 'TKJR',
