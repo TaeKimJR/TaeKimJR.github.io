@@ -3,6 +3,7 @@ import RotatingImages from './../components/rotating-images'
 import AnimatedText from './../components/animated-text'
 import RotatingText from './../components/rotating-text'
 import NavSlider from './../components/nav-slider'
+import ContactForm from './../components/contact-form'
 
 export default React.createClass({
 	displayName: 'TKJR',
@@ -27,7 +28,7 @@ export default React.createClass({
 
 				<div className='nav-container'>
 					<NavSlider>
-						HELLO WORLD
+						<ContactForm />
 					</NavSlider>
 				</div>
 			</div>

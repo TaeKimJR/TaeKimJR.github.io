@@ -5,6 +5,7 @@ import RotatingImageStyle from './styles/rotating-images.less'
 import AnimatedTextStyle from './styles/animated-text.less'
 import RotatingTextStyle from './styles/rotating-text.less'
 import NavStyle from './styles/nav-slider.less'
+import ContactForm from './styles/contact-form.less'
 
 window.app = app
 
