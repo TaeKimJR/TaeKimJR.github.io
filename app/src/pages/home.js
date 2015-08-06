@@ -9,7 +9,7 @@ export default React.createClass({
 	displayName: 'TKJR',
 
 	render() {
-		var imageSrcList = ['http://placehold.it/350x150', 'http://placehold.it/250x150', 'http://placehold.it/150x150']
+		var imageSrcList = ['https://placehold.it/350x150', 'https://placehold.it/250x150', 'https://placehold.it/150x150']
 		var textList = ['text1', 'text2', 'text3']
 
 		return (
