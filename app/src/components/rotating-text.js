@@ -50,7 +50,7 @@ export default React.createClass({
   	setTimeout(
   		function(){
 				timeoutThis.setState({opacity: 100})
-  		}, timeoutThis.ANIMATION_DURATION)
+  		}, timeoutThis.ANIMATION_DURATION + 400)
   },
 
 	render () {
