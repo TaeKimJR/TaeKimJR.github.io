@@ -23,7 +23,7 @@ export default React.createClass({
 			'Denverite', 													
 			'... but from Iowa!', 								
 			'Ba la la la la la...',
-			'<3 JS'
+			'I <3 JS'
 		]
 
 		return (
