@@ -3,6 +3,9 @@ import React from 'react'
 export default React.createClass({
 	displayName: 'NavSlider',
 
+	scrollUp: 'up',
+	scrollDown: 'down',
+
 	getInitialState () {
 		return {
 			circleTop: 0,
@@ -15,9 +18,28 @@ export default React.createClass({
 	toggleNav () {
 		if(this.state.opened){
 			this.setState({opened: false, circleTop: 0, lineTop: 0, contentMargin: '100vh'})
+
+			var timeoutThis = this;
+			setTimeout(function(){
+				timeoutThis._autoScroll(timeoutThis.scrollDown)
+			}, 1000)
 		}
 		else{
 			this.setState({opened: true, circleTop: 'calc(-100vh + 60px + 50px)', lineTop: 'calc(-100vh + 25px)', contentMargin: '0vh'})
+		
+			var timeoutThis = this;
+			setTimeout(function(){
+				timeoutThis._autoScroll(timeoutThis.scrollUp)
+			}, 1000)
+		}
+	},
+
+	_autoScroll (direction) {
+		if(direction === this.scrollUp){
+			window.scrollBy(0, -100);
+		}
+		else{
+			window.scrollBy(0, 100);
 		}		
 	},
 
