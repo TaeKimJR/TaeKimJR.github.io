@@ -18,29 +18,10 @@ export default React.createClass({
 	toggleNav () {
 		if(this.state.opened){
 			this.setState({opened: false, circleTop: 0, lineTop: 0, contentMargin: '100vh'})
-
-			var timeoutThis = this;
-			setTimeout(function(){
-				timeoutThis._autoScroll(timeoutThis.scrollDown)
-			}, 1000)
 		}
 		else{
-			this.setState({opened: true, circleTop: 'calc(-100vh + 60px + 50px)', lineTop: 'calc(-100vh + 25px)', contentMargin: '0vh'})
-		
-			var timeoutThis = this;
-			setTimeout(function(){
-				timeoutThis._autoScroll(timeoutThis.scrollUp)
-			}, 1000)
+			this.setState({opened: true, circleTop: 'calc(-100vh + 60px + 120px)', lineTop: 'calc(-100vh + 45px)', contentMargin: '0vh'})
 		}
-	},
-
-	_autoScroll (direction) {
-		if(direction === this.scrollUp){
-			window.scrollBy(0, -100);
-		}
-		else{
-			window.scrollBy(0, 100);
-		}		
 	},
 
 	render() {

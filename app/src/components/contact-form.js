@@ -29,7 +29,7 @@ export default React.createClass({
 
 					<div className='form-input'>
 						<label>Email</label>
-						<input type='email' placeholder='BigHero6@Disney.com' />
+						<input type='email' placeholder='bigherosix@disney.com' />
 					</div>
 
 					<div className='form-input'>
