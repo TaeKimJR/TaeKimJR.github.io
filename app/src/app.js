@@ -1,9 +1,10 @@
 import React from 'react'
 import Router from 'react-router'
 import Home from './pages/home'
+import NotFound from './pages/not-found'
 import MainStyle from './styles/main.less'
 
-var { Route } = Router;
+var { Route, NotFoundRoute } = Router;
 
 var routes = (
   <Route handler={Home} path="/">

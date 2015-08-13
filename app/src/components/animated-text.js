@@ -4,16 +4,8 @@ import AnimatedLetter from './animated-letter'
 export default React.createClass({
 	displayName: 'AnimatedText',
 
-	getInitialState () {
-		var { text } = this.props
-
-		return {
-			letterList: text.split(''),
-		}
-	},
-
 	render () {
-		var {letterList} = this.state
+		var letterList = this.props.text.split('')
 
 		return (
 			<div className='animated-text'>

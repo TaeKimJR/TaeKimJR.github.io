@@ -22,7 +22,7 @@ export default React.createClass({
   },
 
   _rotateText () {
-  	// TODO: WE NEED TO MAKE THESE ASYNC, one after the other (without timeouts)
+  	// TODO: WE NEED TO MAKE THESE ASYNC, in a better way
   	this._fadeOutText()
   	this._nextText()
   	this._fadeInText()

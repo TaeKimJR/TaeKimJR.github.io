@@ -25,7 +25,7 @@ export default React.createClass({
   },
 
   _rotateImage () {
-  	// TODO: WE NEED TO MAKE THESE ASYNC, one after the other
+  	// TODO: WE NEED TO MAKE THESE ASYNC, in a better way
   	this._fadeOutImage()
   	this._nextImage()
   	this._fadeInImage()

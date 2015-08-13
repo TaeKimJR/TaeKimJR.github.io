@@ -5,6 +5,9 @@ import RotatingText from './../components/rotating-text'
 import NavSlider from './../components/nav-slider'
 import ContactForm from './../components/contact-form'
 
+import Router from 'react-router'
+var { Route, RouteHandler, Link } = Router;
+
 export default React.createClass({
 	displayName: 'TKJR',
 
@@ -45,6 +48,8 @@ export default React.createClass({
 						<ContactForm />
 					</NavSlider>
 				</div>
+
+				<RouteHandler />
 			</div>
 		)
 	}
