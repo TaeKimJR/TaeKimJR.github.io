@@ -1,19 +1,15 @@
-import app from 'ampersand-app'
-import Router from './router'
+import React from 'react'
+import Router from 'react-router'
+import Home from './pages/home'
 import MainStyle from './styles/main.less'
-import RotatingImageStyle from './styles/rotating-images.less'
-import AnimatedTextStyle from './styles/animated-text.less'
-import RotatingTextStyle from './styles/rotating-text.less'
-import NavStyle from './styles/nav-slider.less'
-import ContactFormStyle from './styles/contact-form.less'
 
-window.app = app
+var { Route } = Router;
 
-app.extend({
-  init(){
-    this.Router = new Router()
-    this.Router.history.start()
-  }
-})
+var routes = (
+  <Route handler={Home} path="/">
+  </Route>
+);
 
-app.init()
+Router.run(routes, function (Handler) {
+  React.render(<Handler/>, document.body);
+});
