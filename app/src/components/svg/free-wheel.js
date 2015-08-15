@@ -7,7 +7,7 @@ export default React.createClass({
 		return (
 			<svg viewBox="0 0 712 387">
 			  <title>Free-Wheel</title>
-			  <g id="bike" transform="translate(6.000000, 0.000000)" fill="none">
+			  <g id="bicycle" transform="translate(6.000000, 0.000000)" fill="none">
 			    <g id="seat" transform="translate(180.000000, 0.000000)"  >
 			      <path d="M27.5,23.5 L32.5,28.5" stroke="#000000" strokeWidth="2" strokeLinecap="square"></path>
 			      <path d="M33.5,29 L60.5,29" stroke="#000000" strokeWidth="2" strokeLinecap="square"></path>

@@ -1,16 +1,12 @@
 .rotating-images {
 	.img-container {
-		position: relative;
-		height: 0;
-		padding-bottom: 100%;	// square
+		display: table;
+		height: 250px;
+    width: 250px;
 
 		.img-element {
-			position: absolute;
-			top:	0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-
+			display: table-cell; 
+			vertical-align: middle;
 			transition: left 1s ease-in;
 		}
 	}

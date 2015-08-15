@@ -8,8 +8,7 @@ import Router from 'react-router'
 var { RouteHandler } = Router;
 
 var svgList = [
-	'freewheel',
-	'nothing'
+	'freewheel'
 ]
 
 var textList = [
