@@ -74,7 +74,9 @@ export default React.createClass({
 		return (
 			<div className='rotating-images'>
 				<div className='img-container'>
-					<SVGChooser svgType={svgType} />
+					<div className='img-element' style={imageStyle}>
+						<SVGChooser svgType={svgType} />
+					</div>
 				</div>
 			</div>
 		)
