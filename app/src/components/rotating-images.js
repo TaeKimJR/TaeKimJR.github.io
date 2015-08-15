@@ -1,4 +1,5 @@
 import React from 'react'
+import SVGChooser from './svg-chooser'
 
 export default React.createClass({
 	displayName: 'RotatingImages',
@@ -36,8 +37,8 @@ export default React.createClass({
 
 		setTimeout(
   		function(){
-  			var imageListLength = timeoutThis.props.imageSrcList.length
-				var nextIndex = ( timeoutThis.state.index + 1 ) % imageListLength
+  			var svgListLength = timeoutThis.props.svgList.length
+				var nextIndex = ( timeoutThis.state.index + 1 ) % svgListLength
 
 				timeoutThis.setState({index: nextIndex})
   		}, timeoutThis.ANIMATION_DURATION)  	
@@ -63,8 +64,8 @@ export default React.createClass({
 
 	render () {
 		var currentIndex = this.state.index
-		var imageList = this.props.imageSrcList
-		var imageSrc = imageList[currentIndex]
+		var svgList = this.props.svgList
+		var svgType = svgList[currentIndex]
 
 		var imageStyle = {
 			left: this.state.left
@@ -73,7 +74,7 @@ export default React.createClass({
 		return (
 			<div className='rotating-images'>
 				<div className='img-container'>
-					<img src={imageSrc} className='img-element' style={imageStyle}/>
+					<SVGChooser svgType={svgType} />
 				</div>
 			</div>
 		)
