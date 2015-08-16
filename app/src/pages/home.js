@@ -8,6 +8,7 @@ import Router from 'react-router'
 var { RouteHandler } = Router;
 
 var svgList = [
+	'baymax',
 	'freewheel'
 ]
 
@@ -20,10 +21,16 @@ var textList = [
 	'I <3 JS'
 ]
 
+var pageTitle = 'Tae Kim'
+
 export default React.createClass({
 	displayName: 'TKJR',
 
-	render() {
+	componentDidMount () {
+    document.title = pageTitle;
+  },
+
+	render () {
 		return (
 			<div className='home'>
 				<div className='container'>

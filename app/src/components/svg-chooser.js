@@ -1,5 +1,6 @@
 import React from 'react'
 import FreeWheelSVG from './svg/free-wheel'
+import BaymaxSVG from './svg/baymax'
 
 export default React.createClass({
 	displayName: 'SVGChooser',
@@ -10,16 +11,16 @@ export default React.createClass({
         return (
         	<FreeWheelSVG />
         );
-      case 'denver':
+      case 'baymax':
         return (
-          <h1>HELLO WORLD</h1>
+          <BaymaxSVG />
         );
     }
   },
 
 	render () {
 		return (
-			<div>
+			<div className='svg-chooser'>
 				{this.renderSVG()}
 			</div>
 		)
