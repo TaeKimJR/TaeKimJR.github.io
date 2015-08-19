@@ -1,6 +1,7 @@
 import React from 'react'
 import FreeWheelSVG from './svg/free-wheel'
 import BaymaxSVG from './svg/baymax'
+import TurbineSVG from './svg/turbine'
 
 export default React.createClass({
 	displayName: 'SVGChooser',
@@ -14,6 +15,10 @@ export default React.createClass({
       case 'baymax':
         return (
           <BaymaxSVG />
+        );
+      case 'turbine':
+        return (
+          <TurbineSVG />
         );
     }
   },
