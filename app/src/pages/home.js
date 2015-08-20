@@ -8,7 +8,7 @@ import Router from 'react-router'
 var { RouteHandler } = Router;
 
 var svgList = [
-	'denver',
+	// 'denver',
 	'freewheel',
 	'denver',
 	'turbine',
@@ -16,12 +16,12 @@ var svgList = [
 ]
 
 var textList = [
-	'Front-Web-Dev', 														
+	// 'Front-Web-Dev', 														
 	'Free-Wheel', 												
 	'Denverite', 													
 	'... but from Iowa!', 								
 	'Ba la la la la la...',
-	'I <3 JS'
+	// 'I <3 JS'
 ]
 
 var pageTitle = 'Tae Kim'
@@ -38,13 +38,13 @@ export default React.createClass({
 			<div className='home'>
 				<div className='container'>
 					<div className='image-container'>
-						<RotatingImages svgList={svgList} timer={5000} />
+						<RotatingImages svgList={svgList} timer={6000} />
 					</div>
 					<div className='name-container'>
 						<AnimatedText text='TAE KIM' />
 					</div>
 					<div className='description-container'>
-						<RotatingText textList={textList} timer={5000} />
+						<RotatingText textList={textList} timer={6000} />
 					</div>
 				</div>
 
