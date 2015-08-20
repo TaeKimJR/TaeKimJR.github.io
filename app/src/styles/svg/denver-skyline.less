@@ -1,28 +1,14 @@
 #denver-skyline {
 	@keyframes sun-rise {
 		0%   {transform: translate(0, 100%)}
-		50%  {transform: translate(0, 100%)}
+		10%  {transform: translate(0, 100%)}
     100% {transform: translate(0, 0%)}
-	}
-
-	@keyframes mountain-rise {
-		0%   {transform: translate(0, 130%)}
-		25%  {transform: translate(0, 130%)}
-    50%  {transform: translate(0, 65%)}
-    100% {transform: translate(0, 65%)}
 	}
 
 	.sun-rise {
 		animation-name: sun-rise; 
-		animation-duration: 5s;
+		animation-duration: 3s;
 		animation-iteration-count: 1; 
 		animation-timing-function: linear;
-	}
-
-	.mountain-rise {
-		animation-name: mountain-rise; 
-		animation-duration: 5s;
-		animation-iteration-count: 1; 
-		animation-timing-function: linear;	
 	}
 }

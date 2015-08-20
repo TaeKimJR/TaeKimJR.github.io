@@ -9,9 +9,10 @@ var { RouteHandler } = Router;
 
 var svgList = [
 	'denver',
+	'freewheel',
+	'denver',
 	'turbine',
-	'baymax',
-	'freewheel'
+	'baymax'
 ]
 
 var textList = [
