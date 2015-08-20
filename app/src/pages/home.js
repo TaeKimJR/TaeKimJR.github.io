@@ -8,6 +8,7 @@ import Router from 'react-router'
 var { RouteHandler } = Router;
 
 var svgList = [
+	'denver',
 	'turbine',
 	'baymax',
 	'freewheel'
