@@ -4,7 +4,7 @@ import Home from './pages/home'
 import NotFound from './pages/not-found'
 import MainStyle from './styles/main.less'
 
-var { Route, NotFoundRoute } = Router;
+var { Route } = Router;
 
 var routes = (
   <Route handler={Home} path="/">

@@ -1,4 +1,5 @@
 import React from 'react'
+import BackpackSVG from './svg/backpack'
 import FreeWheelSVG from './svg/free-wheel'
 import BaymaxSVG from './svg/baymax'
 import TurbineSVG from './svg/turbine'
@@ -9,6 +10,10 @@ export default React.createClass({
 
 	renderSVG () {
     switch (this.props.svgType) {
+    	case 'backpack':
+        return (
+        	<BackpackSVG />
+        );
       case 'freewheel':
         return (
         	<FreeWheelSVG />

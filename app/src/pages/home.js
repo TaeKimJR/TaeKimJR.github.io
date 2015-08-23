@@ -8,7 +8,7 @@ import Router from 'react-router'
 var { RouteHandler } = Router;
 
 var svgList = [
-	// 'denver',
+	'backpack',
 	'freewheel',
 	'denver',
 	'turbine',
@@ -16,7 +16,7 @@ var svgList = [
 ]
 
 var textList = [
-	// 'Front-Web-Dev', 														
+	'Front-Web-Dev', 														
 	'Free-Wheel', 												
 	'Denverite', 													
 	'... but from Iowa!', 								

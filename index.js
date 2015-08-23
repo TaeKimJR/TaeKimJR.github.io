@@ -1,5 +1,7 @@
 var express = require('express'),
-    config = require('./config.js');
+    config = require('./config.js'),
+    processingResult = require('./processing_result.js'),
+    sendgrid  = require('sendgrid')(config.SEND_GRID_API_KEY);
 
 var app = express();
 
@@ -18,6 +20,34 @@ app.use(app.router);
 // VIEWS
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname+'/public/index.html'));
+});
+
+app.post('/contact', function (req, res, next){
+  var result = new processingResult.ProcessingResult();
+
+  var contactName = req.body.contactName;
+  var contactEmail = req.body.contactEmail;
+  var contactMessage = req.body.contactMessage;
+
+  var emailBody = "Name: " + contactName + " \n" +
+  	"Email: " + contactEmail + " \n" +
+  	"Message: " + contactMessage + " \n";
+
+  var payload   = {
+	  to      : config.SEND_GRID_TO_EMAIL,
+	  from    : config.SEND_GRID_FROM_EMAIL,
+	  subject : 'TKJR Contact Message!!!',
+	  text    : emailBody
+	}
+
+	sendgrid.send(payload, function(err, json) {
+	  if (err) { 
+	  	result.isSuccessful = false;
+	  	result.errorMessage = err;
+	  }
+	});
+
+	res.send(result);
 });
 
 //===============PORT=================
