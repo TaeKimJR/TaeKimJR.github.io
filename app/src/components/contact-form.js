@@ -9,7 +9,8 @@ export default React.createClass({
     	contactEmail: '',
     	contactMessage: '',
     	baymaxQuote: this.randomBaymaxQuote(),
-    	errorMessage: ''
+    	errorMessage: '',
+    	formDisabled: false
     };
   },
 
@@ -27,6 +28,7 @@ export default React.createClass({
 
   contactFormSubmission (event) {
 		event.preventDefault()
+		this.disableForm();
 
 		var data = 'contactName=' + this.state.contactName + "&contactEmail=" + this.state.contactEmail + "&contactMessage=" + this.state.contactMessage;
 
@@ -35,6 +37,7 @@ export default React.createClass({
 
 	sendEmail (data) {
 		var xmlhttp;
+		var tempThis = this  	
 
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -47,11 +50,12 @@ export default React.createClass({
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
            if(xmlhttp.status == 200){
-           			debugger
-               this.setState({errorMessage: ''});
+           		// TODO: Read message from backend.
+               tempThis.setState({errorMessage: 'Thanks ' + tempThis.state.contactName + '! You will hear back from me soon.'});
            }
            else {
-               this.setState({errorMessage: ("Issue sending message. Please try again.")});
+               tempThis.setState({errorMessage: ("Issue sending message. Please try again.")});
+           		 tempThis.enableForm();
            }
         }
     }
@@ -59,6 +63,14 @@ export default React.createClass({
     xmlhttp.open("POST", "/contact", true);
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send(data);
+	},
+
+	disableForm () {
+		this.setState({formDisabled: true});
+	},
+
+	enableForm () {
+		this.setState({formDisabled: false});
 	},
 
 	baymaxQuotes: [
@@ -82,27 +94,28 @@ export default React.createClass({
 		var contactMessage = this.state.contactMessage;
 		var baymaxQuote = this.state.baymaxQuote;
 		var errorMessage = this.state.errorMessage;
+		var formDisabled = this.state.formDisabled;
 
 		return (
 			<div className='contact-form'>
 				<form onSubmit={this.contactFormSubmission}>
 					<div className='form-input'>
 						<label>Name</label>
-						<input type='text' value={contactName} onChange={this.handleNameChange} maxLength="20" placeholder='Tae Kim' />
+						<input type='text' value={contactName} onChange={this.handleNameChange} disabled={formDisabled} maxLength="20" placeholder='Tae Kim' />
 					</div>
 
 					<div className='form-input'>
 						<label>Email</label>
-						<input type='email' value={contactEmail} onChange={this.handleEmailChange} maxLength="40" placeholder='taekimjr@gmail.com' />
+						<input type='email' value={contactEmail} onChange={this.handleEmailChange} disabled={formDisabled} maxLength="40" placeholder='taekimjr@gmail.com' />
 					</div>
 
 					<div className='form-input'>
 						<label>Message</label>
-						<textarea value={contactMessage} onChange={this.handleMessageChange} rows="10" cols="42" placeholder={baymaxQuote}></textarea>
+						<textarea value={contactMessage} onChange={this.handleMessageChange} disabled={formDisabled} rows="10" cols="42" placeholder={baymaxQuote}></textarea>
 					</div>
 
 					<div className='form-input'>
-						<button type='submit'>Send</button>
+						<button type='submit' disabled={formDisabled}>Send</button>
 						<p className='error-message'>{errorMessage}</p>
 					</div>
 				</form>
