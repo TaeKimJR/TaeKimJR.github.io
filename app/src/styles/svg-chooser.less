@@ -1,8 +1,12 @@
 .svg-chooser {
-	max-height: 250px;
-
 	svg {
 		max-height: 245px;
+	}
+
+	@media screen and (max-height: 600px) {
+    svg {
+    	max-height: @mobile-img-size - 5px;
+    }
 	}
 }
 @import './svg/backpack';

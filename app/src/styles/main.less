@@ -1,5 +1,9 @@
 @import url('http://fonts.googleapis.com/css?family=Oswald:400,700');
 
+@mobile-top-position: 5%;
+@mobile-img-size: 175px;
+@mobile-name-text-size: 50px;
+
 html {
 	font-size: 100%;
 	font-family: 'Oswald', sans-serif;
@@ -37,6 +41,12 @@ body {
 	    text-align: center;
 		}
 
+		@media screen and (max-height: 600px) {
+	    .image-container {
+	    	width: @mobile-img-size;
+	    }
+		}
+
 		.name-container {
 			text-align: center;
 			white-space: nowrap;
@@ -45,6 +55,12 @@ body {
 		.description-container {
 			text-align: center;
 		}
+	}
+
+	@media screen and (max-height: 600px) {
+    .container {
+    	top: @mobile-top-position;
+    }
 	}
 
 	.nav-container {
