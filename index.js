@@ -1,56 +1,28 @@
-var express = require('express'),
-    config = require('./config.js'),
-    processingResult = require('./processing_result.js'),
-    sendgrid  = require('sendgrid')(config.SEND_GRID_API_KEY);
+// # Ghost Startup
+// Orchestrates the startup of Ghost when run from command line.
+var express,
+    ghost,
+    parentApp,
+    errors;
 
-var app = express();
+// Make sure dependencies are installed and file system permissions are correct.
+require('./core/server/utils/startup-check').check();
 
-//===============EXPRESS=================
-// Configure Express
-app.use(express.static(__dirname + '/public'));
+// Proceed with startup
+express = require('express');
+ghost = require('./core');
+errors = require('./core/server/errors');
 
-app.use(express.cookieParser());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(express.session({ secret: config.secret }));
+// Create our parent express app instance.
+parentApp = express();
 
-app.use(app.router);
+// Call Ghost to get an instance of GhostServer
+ghost().then(function (ghostServer) {
+    // Mount our Ghost instance on our desired subdirectory path if it exists.
+    parentApp.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
 
-//===============ROUTES=================
-// VIEWS
-app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname+'/public/index.html'));
+    // Let Ghost handle starting our server instance.
+    ghostServer.start(parentApp);
+}).catch(function (err) {
+    errors.logErrorAndExit(err, err.context, err.help);
 });
-
-app.post('/contact', function (req, res, next){
-  var result = new processingResult.ProcessingResult();
-
-  var contactName = req.body.contactName;
-  var contactEmail = req.body.contactEmail;
-  var contactMessage = req.body.contactMessage;
-
-  var emailBody = "Name: " + contactName + " \n" +
-  	"Email: " + contactEmail + " \n" +
-  	"Message: " + contactMessage + " \n";
-
-  var payload   = {
-	  to      : config.SEND_GRID_TO_EMAIL,
-	  from    : config.SEND_GRID_FROM_EMAIL,
-	  subject : 'TKJR Contact Message!!!',
-	  text    : emailBody
-	}
-
-	sendgrid.send(payload, function(err, json) {
-	  if (err) { 
-	  	result.isSuccessful = false;
-	  	result.errorMessage = err;
-	  }
-	});
-
-	res.send(result);
-});
-
-//===============PORT=================
-var port = process.env.PORT || 5000;
-console.log("||||||||| PORT: " + port + " |||||||||");
-app.listen(port);
