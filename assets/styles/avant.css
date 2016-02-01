@@ -55,7 +55,7 @@ a:hover, a:active, a:visited {
   padding: 2em;
   border-radius: 3px;
 
-  background-color: #ECE2D4;	
+  background-color: #F3F3F3;	
 }
 
 #contact-info h1 {
@@ -66,6 +66,7 @@ a:hover, a:active, a:visited {
 
 #contact-info hr {
 	margin: .5;
+	background-color: #6B6A6A;
 }
 
 #contact-info h3 {
