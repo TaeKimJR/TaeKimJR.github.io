@@ -259,8 +259,8 @@ var mr_firstSectionHeight,
     
     if($(target+' .instafeed').length){
     	jQuery.fn.spectragram.accessData = {
-			accessToken: '224350065.0103430.840298860b2843b8a84c89f4065a6cf7',
-			clientID: '0103430f8f8548099a98276913942bc2'
+			accessToken: '13795654.80aec02.8515cf00a4224ca6b8bfc4e6f4b3325d',
+			clientID: '80aec0267e6f46459a2a3bd5178c8c15'
 		};	
 
         $(target+' .instafeed').each(function() {
