@@ -8,10 +8,6 @@
         margin-top: -.5rem;
     }
 
-    .text-fix-lg {
-        margin-top: -1rem;
-    }
-
     .text-fix-sm {
         margin-top: -.3rem;
     }
@@ -63,6 +59,12 @@ a:link, a:visited, a:hover, a:active {
     font-size: 3.5rem;
 }
 
+@media (max-width: 800px) {
+    .site-wrapper {
+        font-size: 2rem;
+    }
+}
+
 .nav {
     z-index: 10;
     position: absolute;
@@ -73,7 +75,8 @@ a:link, a:visited, a:hover, a:active {
 
 @media (max-width: 800px) {
     .nav {
-        display: none;
+        top: initial;
+        bottom: 2rem;
     }
 }
 
@@ -107,7 +110,9 @@ a:link, a:visited, a:hover, a:active {
 @media (max-width: 800px) {
     .hero{
         min-height: 100vh;
+        display: block;
         text-align: center;
+        padding-top: 1rem;
     }
 
     .hero img {
@@ -138,7 +143,6 @@ a:link, a:visited, a:hover, a:active {
 
 @media (max-width: 800px) {
     .host {
-        font-size: 2rem;
         margin-right: 1rem;
         margin-left: 1rem;
     }
@@ -195,28 +199,18 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 800px) {
-    .sponsors {
-        font-size: 2rem;
+    .sponsor-title {
+        margin-bottom: 1rem;
     }
 
     .sponsor {
+        max-width: 90%;
         width: 20rem;
         height: 20rem;
-    }
-
-    .sponsor-1 {
-        top: -1rem;
-        left: -1rem;
-    }
-
-    .sponsor-2 {
-        top: -2rem;
-        right: -1rem;
-    }
-
-    .sponsor-3 {
-        top: -3rem;
-        left: -1rem;
+        top: initial;
+        left: initial;
+        right: initial;
+        margin-bottom: .5rem;
     }
 }
 
@@ -233,7 +227,6 @@ a:link, a:visited, a:hover, a:active {
         display: block;
         margin-right: 1rem;
         margin-left: 1rem;
-        font-size: 2rem;
     }
 
     .info-box:first-child {
@@ -257,5 +250,9 @@ a:link, a:visited, a:hover, a:active {
 @media (max-width: 800px) {
     .contact {
         font-size: 1.5rem;
+    }
+
+    .email {
+        padding: .5rem;
     }
 }
