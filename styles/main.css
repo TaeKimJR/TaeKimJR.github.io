@@ -3,8 +3,29 @@
     margin-top: -1rem;
 }
 
+@media (max-width: 800px) {
+    .text-fix {
+        margin-top: -.5rem;
+    }
+
+    .text-fix-lg {
+        margin-top: -1rem;
+    }
+
+    .text-fix-sm {
+        margin-top: -.3rem;
+    }
+}
+
 .section {
     min-height: 100vh;
+}
+
+@media (max-width: 800px) {
+    .section {
+        min-height: inherit;
+        margin-bottom: 10rem;
+    }
 }
 
 .centered-content {
@@ -50,6 +71,13 @@ a:link, a:visited, a:hover, a:active {
     text-align: center;
 }
 
+@media (max-width: 800px) {
+    .nav {
+        top: initial;
+        bottom: 1rem;
+    }
+}
+
 .nav .nav-item:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -77,6 +105,31 @@ a:link, a:visited, a:hover, a:active {
     max-width: 90vw;
 }
 
+@media (max-width: 800px) {
+    .hero{
+        min-height: 100vh;
+        display: block;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .hero img {
+        max-width: 99vw;
+    }
+}
+
+.video iframe {
+    width: 767px;
+    height: 500px;
+}
+
+@media (max-width: 800px) {
+    .video iframe {
+        width: 90%;
+        height: 15rem;
+    }
+}
+
 .host-inner {
     padding: 1.5rem 3rem 2rem;;
 }
@@ -84,6 +137,14 @@ a:link, a:visited, a:hover, a:active {
 .host-title {
     margin-bottom: 1rem;
     text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .host {
+        font-size: 2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
 }
 
 .sponsors {
@@ -136,12 +197,51 @@ a:link, a:visited, a:hover, a:active {
     background-size: cover;
 }
 
+@media (max-width: 800px) {
+    .sponsors {
+        font-size: 2rem;
+    }
+
+    .sponsor {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .sponsor-1 {
+        top: -1rem;
+        left: -1rem;
+    }
+
+    .sponsor-2 {
+        top: -2rem;
+        right: -1rem;
+    }
+
+    .sponsor-3 {
+        top: -3rem;
+        left: -1rem;
+    }
+}
+
 .info-box {
     padding: 2rem 3rem;
 }
 
 .info-date {
     margin-right: 2rem;
+}
+
+@media (max-width: 800px) {
+    .info {
+        display: block;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+
+    .info-box:first-child {
+        margin-bottom: 2rem;
+    }
 }
 
 .contact {
@@ -155,4 +255,10 @@ a:link, a:visited, a:hover, a:active {
 .contact .email:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .contact {
+        font-size: 1.5rem;
+    }
 }
