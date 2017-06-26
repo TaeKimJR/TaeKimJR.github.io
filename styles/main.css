@@ -73,8 +73,7 @@ a:link, a:visited, a:hover, a:active {
 
 @media (max-width: 800px) {
     .nav {
-        top: initial;
-        bottom: 1rem;
+        display: none;
     }
 }
 
@@ -108,9 +107,7 @@ a:link, a:visited, a:hover, a:active {
 @media (max-width: 800px) {
     .hero{
         min-height: 100vh;
-        display: block;
         text-align: center;
-        padding-top: 1rem;
     }
 
     .hero img {
