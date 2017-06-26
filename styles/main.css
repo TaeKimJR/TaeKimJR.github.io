@@ -114,6 +114,7 @@ a:link, a:visited, a:hover, a:active {
         display: block;
         text-align: center;
         padding-top: 2rem;
+        margin-bottom: 0;
     }
 
     .hero img {
