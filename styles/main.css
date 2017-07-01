@@ -17,6 +17,10 @@
     .text-fix-sm {
         margin-top: -.3rem;
     }
+
+    .minor-text {
+        font-size: 1.75rem;
+    }
 }
 
 .section {
@@ -164,6 +168,10 @@ a:link, a:visited, a:hover, a:active {
     .host {
         margin-right: 1rem;
         margin-left: 1rem;
+    }
+
+    .host-inner {
+        padding: 1rem 1.5rem;
     }
 }
 
