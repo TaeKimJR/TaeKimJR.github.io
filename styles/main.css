@@ -3,6 +3,12 @@
     margin-top: -1rem;
 }
 
+.minor-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
 @media (max-width: 800px) {
     .text-fix {
         margin-top: -.5rem;
@@ -135,7 +141,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .host-inner {
-    padding: 1.5rem 3rem 2rem;;
+    padding: 3.5rem 5rem;
 }
 
 .host-title {
