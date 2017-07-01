@@ -79,14 +79,6 @@ a:link, a:visited, a:hover, a:active {
     text-align: center;
 }
 
-@media (max-width: 800px) {
-    .nav {
-        display: block;
-        position: relative;
-        margin-top: 3rem;
-    }
-}
-
 .nav .nav-item:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -102,6 +94,25 @@ a:link, a:visited, a:hover, a:active {
 
 .nav-item:last-child {
     margin-right: 0;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        display: block;
+        position: relative;
+        margin-top: 3rem;
+    }
+
+    .nav-inner {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .nav-item {
+        margin-bottom: .5rem;
+    }
 }
 
 .hero {
