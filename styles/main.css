@@ -100,6 +100,10 @@ a:link, a:visited, a:hover, a:active {
     margin-right: 0;
 }
 
+.fb-nav {
+    display: none;
+}
+
 @media (max-width: 800px) {
     .nav {
         display: block;
@@ -116,6 +120,10 @@ a:link, a:visited, a:hover, a:active {
 
     .nav-item {
         margin-bottom: .5rem;
+    }
+    
+    .fb-nav {
+        display: block;
     }
 }
 
@@ -274,12 +282,28 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: underline;
 }
 
+.fb {
+    margin-right: 3rem;
+    padding: .6rem .6rem 0;
+}
+
+.fb img {
+    width: 5rem;
+    heigth: 5rem;
+}
+
 @media (max-width: 800px) {
     .contact {
         font-size: 1.5rem;
+        flex-direction: column;
     }
 
     .email {
         padding: .5rem;
+    }
+
+    .fb {
+        margin-bottom: 3rem;
+        margin-right: 0;
     }
 }
