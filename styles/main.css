@@ -163,6 +163,21 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
+.fb-section {
+    text-align: center;
+}
+
+.fb-section img {
+    width: 5rem;
+    height: 5rem;
+}
+
+@media (max-width: 800px) {
+    .fb-section {
+        display: none;
+    }
+}
+
 .host-inner {
     padding: 3.5rem 5rem;
 }
