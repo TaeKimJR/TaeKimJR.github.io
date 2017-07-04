@@ -9,6 +9,10 @@
     font-weight: 700;
 }
 
+.smaller-text {
+    font-size: 2rem;
+}
+
 @media (max-width: 800px) {
     .text-fix {
         margin-top: -.5rem;
@@ -20,6 +24,10 @@
 
     .minor-text {
         font-size: 1.5rem;
+    }
+
+    .smaller-text {
+        font-size: 1rem;
     }
 }
 
